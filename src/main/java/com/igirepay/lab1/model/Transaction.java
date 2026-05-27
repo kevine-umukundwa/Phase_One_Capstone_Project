@@ -1,0 +1,51 @@
+package com.igirepay.lab1.model;
+
+import java.time.LocalDateTime;
+
+public class Transaction {
+
+    private int id;
+    private int accountId;
+    private String referenceId;
+    private String transactionType;
+    private double amount;
+    private LocalDateTime createdAt;
+
+    public Transaction() {}
+
+    public Transaction(int id, int accountId, String referenceId,
+                       String transactionType, double amount, LocalDateTime createdAt) {
+        this.id = id;
+        this.accountId = accountId;
+        this.referenceId = referenceId;
+        this.transactionType = transactionType;
+        this.amount = amount;
+        this.createdAt = createdAt;
+    }
+
+
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public int getAccountId() { return accountId; }
+    public void setAccountId(int accountId) { this.accountId = accountId; }
+
+    public String getReferenceId() { return referenceId; }
+    public void setReferenceId(String referenceId) { this.referenceId = referenceId; }
+
+    public String getTransactionType() { return transactionType; }
+    public void setTransactionType(String transactionType) { this.transactionType = transactionType; }
+
+    public double getAmount() { return amount; }
+    public void setAmount(double amount) { this.amount = amount; }
+
+    public LocalDateTime getCreatedAt() { return createdAt; }
+    public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+
+    @Override
+    public String toString() {
+        return "Transaction{id=" + id + ", refId=" + referenceId +
+               ", type=" + transactionType + ", amount=" + amount +
+               ", at=" + createdAt + "}";
+    }
+}
